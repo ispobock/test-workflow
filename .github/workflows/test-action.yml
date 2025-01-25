@@ -24,7 +24,7 @@ jobs:
             TAG_NAME="v$(cat test/version.py | cut -d'"' -f2)"
             echo "tag_name=$TAG_NAME" >> $GITHUB_OUTPUT
           else
-            echo "tag_name={{ inputs.tag_name }}" >> $GITHUB_OUTPUT
+            echo "tag_name=${{ inputs.tag_name }}" >> $GITHUB_OUTPUT
           fi
       
       - name: Echo output
